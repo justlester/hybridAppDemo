@@ -6,4 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <div class="image-preview-container">
+    <img *ngIf="base64Image" [src]="base64Image"/>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button block (click)="takePicture()">
+      Take a Photo
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+
